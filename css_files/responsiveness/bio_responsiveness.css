@@ -1,0 +1,296 @@
+
+/* =====================================
+   BIOGRAPHY - RESPONSIVE BASE
+===================================== */
+
+#myBiography,
+#myBiography * {
+    box-sizing: border-box;
+}
+
+#myBiography {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+
+    width: 100%;
+    min-width: 0;
+    color: white;
+}
+
+/* Prevent fixed widths from breaking layouts */
+#behindTheCode,
+#educationDiv,
+#skills {
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Biography card */
+#behindTheCode {
+    flex: 2 1 320px;
+    width: auto;
+    overflow-wrap: anywhere;
+}
+
+/* Education card */
+#educationDiv {
+    flex: 1 1 240px;
+    width: auto;
+    overflow-wrap: anywhere;
+}
+
+/* Skills card */
+#skills {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+/* Biography heading */
+#biographyHeader {
+    position: static;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   SKILLS AND LOGOS
+===================================== */
+
+.toolsLogos,
+.logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    max-width: 100%;
+    min-width: 0;
+}
+
+.toolsLogos img,
+.logos img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    #myBiography {
+        gap: 16px;
+    }
+
+    #behindTheCode {
+        flex: 1 1 55%;
+        padding: 18px;
+    }
+
+    #educationDiv {
+        flex: 1 1 35%;
+        padding: 18px;
+    }
+
+    #skills {
+        flex-basis: 100%;
+        padding: 18px;
+    }
+
+    .toolsLogos,
+    .logos {
+        gap: 14px;
+    }
+
+    #skillsHeader,
+    .schoolHeader {
+        font-size: 19px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    #biographyHeader {
+        position: static;
+        font-size: clamp(26px, 7vw, 36px);
+        margin-bottom: 20px;
+    }
+
+    #myBiography {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    #behindTheCode,
+    #educationDiv,
+    #skills {
+        flex: none;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    #behindTheCode,
+    #educationDiv,
+    #skills {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #skillsHeader,
+    .schoolHeader {
+        font-size: 18px;
+    }
+
+    /* Arrange skill logos in neat rows */
+    .toolsLogos,
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    .toolsLogos > *,
+    .logos > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Normalize oversized skill icons */
+    #java img,
+    #psql img,
+    #mysql img,
+    #cassandra img,
+    #spring img,
+    #angular img,
+    #javafx img,
+    #docker img,
+    #git img,
+    #html img,
+    #css img,
+    #yaml img {
+        height: 42px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    #python img,
+    #typescript img,
+    #javascript img {
+        height: 38px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    #mongo img,
+    #cloudinary img {
+        height: 32px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+/* =====================================
+   EXTRA SMALL PHONES
+===================================== */
+
+@media screen and (max-width: 360px) {
+
+    #behindTheCode,
+    #educationDiv,
+    #skills {
+        padding: 14px;
+    }
+
+    .toolsLogos,
+    .logos {
+        gap: 12px;
+    }
+
+    #java img,
+    #psql img,
+    #mysql img,
+    #cassandra img,
+    #spring img,
+    #angular img,
+    #javafx img,
+    #docker img,
+    #git img,
+    #html img,
+    #css img,
+    #yaml img {
+        height: 34px;
+    }
+
+    #python img,
+    #typescript img,
+    #javascript img {
+        height: 32px;
+    }
+
+    #mongo img,
+    #cloudinary img {
+        height: 28px;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    #behindTheCode,
+    #educationDiv,
+    #skills,
+    #java,
+    #python,
+    #typescript,
+    #javascript,
+    #psql,
+    #mysql,
+    #cassandra,
+    #mongo,
+    #spring,
+    #angular,
+    #javafx,
+    #docker,
+    #git,
+    #cloudinary,
+    #html,
+    #css,
+    #yaml {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,55 @@
+
+
+#tfHeader {
+    font-family: 'Noteworthy';
+    letter-spacing: 10px;
+    margin-bottom: 3px;
+
+    background: linear-gradient(70deg, #e5aeed, #67ddc6);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    color: transparent;
+}
+
+#tfType {
+    font-family: 'Avenir Light';
+    font-style:italic;
+    font-size: 17px;  
+    color: white;  
+}
+
+
+#tf_main_container {
+    display: flex;
+    gap: 14%;
+    padding: 20px;
+
+}
+
+#tfStack {
+    font-family: 'Avenir Light';
+    color: white;
+}
+
+#tf_applicationInfo {
+    font-family: 'Avenir Light';
+    color:white;
+}
+
+#tf_exploreButton {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+
+    font-family: 'Noteworthy';
+    background-color: #858585;
+    color:#1d1d1d;
+    border-radius: 15px;
+
+    border-color: transparent;
+    font-weight: bold;
+    
+
+}

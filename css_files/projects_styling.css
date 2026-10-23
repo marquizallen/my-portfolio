@@ -1,0 +1,138 @@
+#display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 630px;
+
+    opacity: 0;
+    animation: fadeInUp 1.0s ease-out forwards;
+}
+.displayHeader {
+    font-family: 'Avenir';
+
+    background: linear-gradient(90deg, #ffffff, #353535);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    color: transparent;
+}
+
+
+#personalProjects {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 1s forwards
+}
+
+#timeframe {
+    background: linear-gradient(90deg, #363636, #282828);
+    color: rgb(255, 255, 255);
+
+    font-family: 'Noteworthy';
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 9px;
+
+    border-radius: 15px;
+
+    height: 200px;
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#allstaff {
+    background: linear-gradient(90deg, #363636, #282828);
+    color: rgb(255, 255, 255);
+    font-family: 'Skia Black';
+    font-size: 50px;
+    letter-spacing: 3px;
+    border-radius: 15px;
+
+    height: 200px;
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#schoolProjects {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 1.5s forwards
+}
+.schoolProject {
+    background: linear-gradient(90deg, #393939, #2a2a2a);
+    height: 200px;
+    width: 400px;
+    border-radius: 15px;
+
+
+    font-family: 'Avenir Light';
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#otherProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.otherProject {
+    font-family: 'Menlo';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: rgba(49, 49, 49, 0.425);
+    font-size: 20px;
+
+    padding: 10px;
+    text-align: center;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 2s forwards
+}
+
+.project:hover {cursor:pointer;}
+.schoolProject:hover{cursor:pointer;}
+.otherProject:hover{cursor:pointer;}
+
+/*
+----------
+KEYFAMES
+----------
+*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    } to 
+    {
+        opacity: 1;
+        transform: translateY(0px);
+         
+    }
+}

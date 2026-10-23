@@ -1,0 +1,313 @@
+
+/* ================================
+   PROJECT DISPLAY
+================================ */
+
+#display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    gap: 24px;
+
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.displayHeader {
+    font-family: 'Avenir';
+
+    background: linear-gradient(90deg, #ffffff, #353535);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    overflow-wrap: anywhere;
+}
+
+/* ================================
+   PERSONAL PROJECTS
+================================ */
+
+#personalProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    width: 100%;
+    margin-bottom: 20px;
+    min-width: 0;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 1s forwards;
+}
+
+#timeframe,
+#allstaff {
+    flex: 1 1 300px;
+    min-width: 0;
+    min-height: 200px;
+    height: auto;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    background: linear-gradient(90deg, #363636, #282828);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+#timeframe {
+    font-family: 'Noteworthy';
+    font-size: clamp(28px, 4vw, 50px);
+    font-weight: bolder;
+    letter-spacing: clamp(2px, 0.7vw, 9px);
+}
+
+#allstaff {
+    font-family: 'Skia Black';
+    font-size: clamp(28px, 4vw, 50px);
+    letter-spacing: clamp(1px, 0.3vw, 3px);
+}
+
+/* ================================
+   SCHOOL PROJECTS
+================================ */
+
+#schoolProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    width: 100%;
+    margin-bottom: 20px;
+    min-width: 0;
+
+    font-size: 30px;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 1.5s forwards;
+}
+
+.schoolProject {
+    flex: 1 1 300px;
+    min-width: 0;
+    min-height: 200px;
+    height: auto;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    background: linear-gradient(90deg, #393939, #2a2a2a);
+    font-family: 'Avenir Light';
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* ================================
+   OTHER PROJECTS
+================================ */
+
+.otherProject {
+    flex: 0 1 200px;
+    min-width: 0;
+    min-height: 200px;
+    height: auto;
+
+    margin-top: 10px;
+    padding: 16px;
+    border-radius: 15px;
+
+    background-color: rgba(49, 49, 49, 0.425);
+    color: white;
+
+    font-family: 'Menlo';
+    font-size: clamp(15px, 2vw, 20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out 2s forwards;
+}
+
+/* ================================
+   HOVER EFFECTS
+================================ */
+
+.project:hover,
+.schoolProject:hover,
+.otherProject:hover,
+#timeframe:hover,
+#allstaff:hover {
+    cursor: pointer;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    #display {
+        gap: 18px;
+    }
+
+    #personalProjects,
+    #schoolProjects {
+        gap: 12px;
+    }
+
+    #timeframe,
+    #allstaff,
+    .schoolProject {
+        flex-basis: 240px;
+        min-height: 180px;
+    }
+
+    .otherProject {
+        flex-basis: 180px;
+        min-height: 180px;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    #display {
+        width: 100%;
+        height: auto;
+        gap: 14px;
+    }
+
+    #personalProjects,
+    #schoolProjects {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        gap: 14px;
+        margin-bottom: 10px;
+    }
+
+    #timeframe,
+    #allstaff,
+    .schoolProject {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        flex: none;
+        min-height: 150px;
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+    #timeframe,
+    #allstaff {
+        font-size: clamp(27px, 8vw, 38px);
+        letter-spacing: 2px;
+    }
+
+    .schoolProject {
+        font-size: 23px;
+    }
+
+    .otherProject {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        min-height: 120px;
+        margin-top: 0;
+        padding: 18px;
+
+        font-size: 17px;
+    }
+
+    .displayHeader {
+        font-size: clamp(25px, 7vw, 34px);
+    }
+}
+
+/* ================================
+   EXTRA SMALL PHONES
+================================ */
+
+@media screen and (max-width: 360px) {
+
+    #timeframe,
+    #allstaff {
+        font-size: 25px;
+        letter-spacing: 1px;
+        padding: 14px;
+    }
+
+    .schoolProject {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    #timeframe,
+    #allstaff,
+    .schoolProject {
+        min-height: 130px;
+    }
+}
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    #display,
+    #personalProjects,
+    #schoolProjects,
+    .otherProject {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ================================
+   KEYFRAMES
+================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,303 @@
+
+/* ================================
+   GLOBAL RESPONSIVE FIXES
+================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body#mainBody {
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Make the container flexible */
+#contentsDiv {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* Keep images from overflowing */
+/* Social media logos */
+#gitImg img,
+#linkedInImg img,
+#instaImg img {
+    display: block;
+
+    width: auto;
+    height: 38px;
+    max-width: 48px;
+
+    object-fit: contain;
+    margin: 20px;
+    border-radius: 0;
+}
+
+/* ================================
+   TABLETS
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    #mainBody {
+        padding: 20px;
+    }
+
+    #contentsDiv {
+        padding: 24px;
+    }
+
+    #myImage {
+        gap: 24px;
+    }
+
+    #introHeader {
+        font-size: clamp(32px, 5vw, 45px);
+    }
+
+    #introductionTexts {
+        font-size: 17px;
+    }
+
+    #myImage > img {
+        width: 50px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    #navLinks {
+        width: auto;
+        flex: 1;
+        word-spacing: normal;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+}
+
+
+/* ================================
+   MOBILE PHONES
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    /* Page background */
+    #mainBody {
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: auto;
+
+        padding: 12px;
+        display: block;
+
+        background-size: cover;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+    /* Main glass-like container */
+    #contentsDiv {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: calc(100dvh - 24px);
+
+        padding: 20px 16px;
+        border-radius: 18px;
+        margin: 0 auto;
+    }
+
+    /* Header and navigation */
+    #headerNav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    #navHeaderText {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    #navLinks {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px 18px;
+
+        text-align: left;
+        word-spacing: normal;
+        font-size: 14px;
+    }
+
+    .navLink {
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    /* Main introduction layout */
+    #myImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 22px;
+        margin-top: 32px;
+        width: 100%;
+    }
+
+    /* Profile portrait */
+    #myImage > img {
+        order: 1;
+
+        width: clamp(160px, 55vw, 220px);
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    /* Introduction text */
+    #introductionTexts {
+        order: 2;
+        width: 100%;
+        min-width: 0;
+
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.7;
+
+        overflow-wrap: anywhere;
+    }
+
+    #introHeader {
+        text-align: center;
+        font-size: clamp(30px, 6vw, 30px);
+        line-height: 1.15;
+        margin: 0 0 20px;
+    }
+
+    #myName {
+        display: inline-block;
+        font-size: clamp(27px, 7vw, 34px);
+        margin-top: 6px;
+    }
+
+    #myStatement {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Resume button */
+    #downloadBtn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: auto;
+        max-width: 100%;
+        min-height: 44px;
+        padding: 10px 18px;
+
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Social icons become a horizontal row */
+    #socials {
+        order: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 28px;
+
+        width: 100%;
+        margin: 10px 0 20px;
+    }
+
+    #gitImg img,
+    #linkedInImg img,
+    #instaImg img {
+        width: 38px;
+        height: 38px;
+
+        object-fit: contain;
+        margin: 0;
+    }
+
+    /* Remove default spacing from the line break after header */
+    #contentsDiv > br {
+        display: none;
+    }
+}
+
+
+/* ================================
+   EXTRA SMALL PHONES
+================================ */
+
+@media screen and (max-width: 360px) {
+
+    #contentsDiv {
+        padding: 16px 12px;
+    }
+
+    #navLinks {
+        gap: 8px 14px;
+        font-size: 13px;
+    }
+
+    #introHeader {
+        font-size: 29px;
+    }
+
+    #myImage > img {
+        width: 155px;
+    }
+}
+
+
+/* ================================
+   ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    #introHeader,
+    #myImage,
+    #introductionTexts,
+    #myImage > img,
+    #socials {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

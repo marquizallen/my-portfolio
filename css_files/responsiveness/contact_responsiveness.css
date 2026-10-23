@@ -1,0 +1,168 @@
+/* =====================================
+   CONTACTS - RESPONSIVE BASE
+===================================== */
+
+#contactsHeader {
+    text-align: center;
+    font-family: 'Helvetica';
+    color: white;
+
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+#modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.contact {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 280px;
+    width: auto;
+    max-width: 400px;
+    min-width: 0;
+    min-height: 300px;
+    height: auto;
+
+    padding: 24px;
+    border-radius: 28px;
+
+    background-color: rgba(53, 53, 53, 0.391);
+
+    color: white;
+    font-size: clamp(18px, 2vw, 25px);
+    font-family: 'Avenir Light';
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+#phoneImg img,
+#emailImg img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: clamp(65px, 10vw, 120px);
+    object-fit: contain;
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    #contactsHeader {
+        font-size: clamp(36px, 6vw, 48px);
+    }
+
+    #modal {
+        gap: 20px;
+    }
+
+    .contact {
+        flex-basis: 240px;
+        min-height: 270px;
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    #phoneImg img,
+    #emailImg img {
+        height: 90px;
+    }
+}
+
+/* =====================================
+   MOBILE PHONES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    #contactsHeader {
+        font-size: clamp(30px, 8vw, 40px);
+        margin-bottom: 24px;
+    }
+
+    #modal {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 18px;
+
+        width: 100%;
+    }
+
+    .contact {
+        flex: none;
+
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+
+        min-height: 230px;
+        height: auto;
+
+        padding: 24px 16px;
+        border-radius: 20px;
+
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    #phoneImg img,
+    #emailImg img {
+        height: 75px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+/* =====================================
+   EXTRA SMALL PHONES
+===================================== */
+
+@media screen and (max-width: 360px) {
+
+    #contactsHeader {
+        font-size: 29px;
+    }
+
+    .contact {
+        min-height: 210px;
+        padding: 18px 12px;
+        font-size: 17px;
+    }
+
+    #phoneImg img,
+    #emailImg img {
+        height: 60px;
+    }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    #contactsHeader,
+    .contact {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

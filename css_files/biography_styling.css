@@ -1,0 +1,144 @@
+#biographyHeader {
+    color: white;
+    font-family:'Avenir Light';
+    font-weight:lighter;
+    position: absolute;
+}
+
+#myBiography {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5%;
+    
+}
+
+#behindTheCode {
+    background-color: rgba(206, 206, 206, 0.137);
+    padding: 20px;
+    width: 500px;
+    font-family: 'Avenir Light';
+    border-radius: 15px;
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    
+}
+#educationDiv {
+    border-radius: 15px;
+
+    background-color: rgba(206, 206, 206, 0.137);
+    width: 300px;
+    padding: 20px;
+    font-family:'Avenir Light';
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+.schoolHeader {
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: bolder;
+}
+.schoolCity {
+    font-style:italic;
+    color: rgb(179, 179, 179);
+}
+
+#skills {
+    font-family:'Avenir Light';
+    background-color: rgba(206, 206, 206, 0.137);
+    padding: 20px;
+    border-radius: 15px;
+
+    width: 500px;
+    height: 680px;
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.5s forwards;
+
+}
+#skillsHeader {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.toolsLogos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    
+}
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;   
+}
+/* Skills Logos */
+
+#java {opacity: 0; animation: fadeInUp 0.8s ease-out 2.0s forwards;}
+#python {opacity: 0; animation: fadeInUp 0.8s ease-out 2.2s forwards;}
+#typescript {opacity: 0; animation: fadeInUp 0.8s ease-out 2.4s forwards;}
+#javascript {opacity: 0; animation: fadeInUp 0.8s ease-out 2.6s forwards;}
+#psql{opacity: 0; animation: fadeInUp 0.8s ease-out 2.8s forwards;}
+#mysql{opacity: 0; animation: fadeInUp 0.8s ease-out 3.0s forwards;}
+#cassandra{opacity: 0; animation: fadeInUp 0.8s ease-out 3.2s forwards;}
+#mongo{opacity: 0; animation: fadeInUp 0.8s ease-out 3.4s forwards;}
+#spring{opacity: 0; animation: fadeInUp 0.8s ease-out 3.6s forwards;}
+#angular{opacity: 0; animation: fadeInUp 0.8s ease-out 3.8s forwards;}
+#javafx{opacity: 0; animation: fadeInUp 0.8s ease-out 4.0s forwards;}
+#docker{opacity:0; animation: fadeInUp 0.8s ease-out 4.2s forwards;}
+#git{opacity: 0; animation: fadeInUp 0.8s ease-out 4.4s forwards;}
+#cloudinary{opacity: 0; animation: fadeInUp 0.8s ease-out 4.6s forwards;}
+#html{opacity: 0; animation: fadeInUp 0.8s ease-out 4.8s forwards;}
+#css{opacity: 0; animation: fadeInUp 0.8s ease-out 5.0s forwards;}
+#yaml{opacity: 0; animation: fadeInUp 0.8s ease-out 5.2s forwards;}
+
+#java img {height: 80px;filter:invert();}
+#python img {height: 50px;}
+#typescript img {height: 50px;}
+#javascript img {height: 50px;}
+#psql img {height: 60px;}
+#mysql img {height: 60px;}
+#cassandra img {height: 60px;filter: invert();}
+#mongo img {height: 30px;}
+#spring img {height: 60px;filter: invert();}
+#angular img {height: 60px;filter:invert();}
+#javafx img {height: 60px;filter:grayscale();}
+#docker img {height: 60px;filter:invert();}
+#git img {height: 60px;}
+#cloudinary img {height: 45px;}
+#html img {height: 60px;filter:invert();}
+#css img {height: 60px;filter:invert();}
+#yaml img {height: 60px;filter:invert();}
+
+/*
+----------
+KEYFAMES
+----------
+*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);   
+    } to 
+    {
+        opacity: 1;
+        transform: translateY(0px);   
+    }
+}
+
+/* Image entrance */
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+           
+    }
+    to {
+        opacity: 1;   
+       
+    }
+}

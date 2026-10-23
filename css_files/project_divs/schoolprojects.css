@@ -1,0 +1,54 @@
+#sp_Header {
+    font-family: 'Avenir';
+    letter-spacing: 4px;
+    margin-bottom: 3px;
+
+    color: white;
+}
+#sp_Stack {
+    font-family: 'Avenir Light';
+    font-style:italic;
+    font-size: 19px;   
+
+    color: white;
+}
+#sp_Type {
+    font-family: 'Avenir Light';
+    font-style:italic;
+    font-size: 24px;
+    
+    color:white;
+}
+#sp_main_container {
+    display: flex;
+    gap: 14%;
+    padding: 20px;
+
+}
+
+#spStack {
+    font-family: 'Avenir Light';
+
+    color:white;
+}
+
+#sp_applicationInfo {
+    font-family: 'Avenir Light';
+    color:white;
+}
+
+#sp_exploreButton {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+
+    font-family: 'Skia Black';
+    background-color: #1c1c1c;
+    color:#6ffcaf;
+    border-radius: 15px;
+
+    border-color: transparent;
+    font-weight: bold;
+    
+
+}

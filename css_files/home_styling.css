@@ -1,0 +1,226 @@
+#mainBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+
+    background-image: url('/images/bg5.jpg');
+    background-size:cover;
+    background-position: center;
+
+
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#contentsDiv {
+    padding: 20px;
+
+    height: 800px;
+    width: 95%;
+    background-color: rgba(1, 1, 1, 0.748);
+
+    border-radius: 20px;
+    
+    
+}
+#headerNav {
+    display:flex;
+    align-items: center;
+}
+#navLinks {
+    width:85%;
+    text-align: right;
+    word-spacing: 45px;
+    font-family: 'Avenir Light';
+
+    color: white;
+}
+
+#navHeaderText {
+    font-family: 'Helvetica';
+    font-weight: bold;
+
+
+  background: linear-gradient(90deg, #ffffff, #aeaeae);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+}
+#myImage {
+    margin-top: 5%;
+
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+   
+}
+
+#myImage img {
+    width:400px;
+    height: 400px;
+ 
+    border-radius: 50%;
+
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+    animation: imageReveal 1.2s ease-out 0.5s forwards;
+
+
+}
+#introductionTexts {
+    text-align: right;
+    color: rgb(182, 182, 182);
+    font-family: 'Avenir Light';
+    font-size: 20px;
+
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+#introHeader{
+    font-size: 55px;
+    background: linear-gradient(90deg, #3d3d3d, #ffffff);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+#myName {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+#myStatement {
+    font-size: 15px;
+}
+
+#socials {
+    display: block;
+    color: white;
+    margin-right: 5%;
+    margin-left: 6%;
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.9s forwards;
+
+}
+
+#gitImg img{
+    height: 50px;
+    border-radius: 0;
+    margin-bottom: 50%;
+}
+#linkedInImg img {
+    height: 50px;
+    border-radius: 0;
+    margin-bottom: 50%;
+
+}
+#instaImg img {
+    height: 50px;
+    border-radius: 0;
+}
+.navLink {
+    transition: all 0.2s ease;
+}
+.navLink:hover {
+    cursor:pointer;
+    color:#808080;
+}
+#downloadBtn {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Avenir Light';
+    text-decoration: none;
+    
+    background-color: transparent;
+    color:rgb(70, 70, 70);
+
+    border-top-color: transparent;
+    border-left-color:transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+   
+
+    transition: all 0.2s ease;
+}
+
+#downloadBtn:hover {
+    cursor: pointer;
+    color:white;
+}
+
+/* Social media icons */
+#socials {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.9s forwards;
+}
+
+/* Fade-in with a subtle upward movement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);   
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);      
+    }
+}
+
+/* Image entrance */
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);       
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);    
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    #introHeader,
+    #myImage,
+    #introductionTexts,
+    #myImage > img,
+    #socials {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*
+ACTIVATE / DEACTIVE COMPONENTS
+*/
+#homeLink.active {
+    color: gray;
+
+}
+#myImage.hidden {
+    display: none;
+}
+
+/* ACTIVATE or DEACTIVATE LINK Buttons */
+#homeLink.active {color:#3d3d3d;}
+#bioLink.active{color:#3d3d3d;}
+#projectLink.active{color:#3d3d3d;}
+#contactLink.active{color:#3d3d3d;}
+
+

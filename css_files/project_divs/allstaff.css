@@ -1,0 +1,49 @@
+#asHeader {
+    font-family: 'Skia Black';
+    letter-spacing: 4px;
+    margin-bottom: 3px;
+    background: linear-gradient(70deg, #a2efbc, #2d4734);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    color: transparent;
+}
+#asType {
+    font-family: 'Avenir Light';
+    font-style:italic;
+    font-size: 17px;
+    color: white;    
+}
+#as_main_container {
+    display: flex;
+    gap: 14%;
+    padding: 20px;
+
+}
+
+#asStack {
+    font-family: 'Avenir Light';
+    color: white;
+}
+
+#as_applicationInfo {
+    font-family: 'Avenir Light';
+    color: white;
+}
+
+#as_exploreButton {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+
+    font-family: 'Skia Black';
+    background-color: #6d6d6d;
+    color:#0b0b0b;
+    border-radius: 15px;
+
+    border-color: transparent;
+    font-weight: bold;
+    
+
+}
