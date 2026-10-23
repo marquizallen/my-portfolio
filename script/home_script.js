@@ -16,12 +16,12 @@ async function loadPage(url) {
 }
 
 async function isBioLoaded() {
-    const response = await fetch("/biography.html");
+    const response = await fetch("biography.html");
     const html = await response.text();
 
     mainContainer.innerHTML = html;
 
-    if (window.location.pathname === "/biography.html") {
+    if (window.location.pathname === "biography.html") {
         bioLink.classList.add("active");
         console.log("bio loaded");
     } else {
@@ -38,16 +38,16 @@ MAIN PAGES
 //=====//
 */
 bioLink.addEventListener('click',(e)=>{
-    loadPage("/biography.html");
+    loadPage("biography.html");
     isBioLoaded();
 });
 
 projectLink.addEventListener('click', (e)=>{
-    loadPage("/projects.html");
+    loadPage("projects.html");
 });
 
 contactLink.addEventListener('click', (e)=>{
-    loadPage("/contacts.html");
+    loadPage("contacts.html");
 });
 
 homeLink.addEventListener('click',(e)=>{
