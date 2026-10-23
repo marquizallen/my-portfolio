@@ -64,28 +64,28 @@ homeLink.addEventListener('click',(e)=>{
 document.addEventListener("click",(e)=>{
     const timeframe = e.target.closest("#timeframe");
     if(timeframe) {
-        loadPage("/html_files/project_divs/timeframe.html");
+        loadPage("html_files/project_divs/timeframe.html");
     }
 });
 
 document.addEventListener("click",(e)=>{
     const allStaff= e.target.closest("#allstaff");
     if(allStaff) {
-        loadPage("/html_files/project_divs/allstaff.html")
+        loadPage("html_files/project_divs/allstaff.html")
     }
 });
 
 document.addEventListener("click", (e)=>{
     const loboticket = e.target.closest("#loboticket");
     if(loboticket) {
-        loadPage("/html_files/project_divs/ticketing.html");
+        loadPage("html_files/project_divs/ticketing.html");
     }
 });
 
 document.addEventListener("click",(e)=>{
     const recipe = e.target.closest("#recipes");
     if(recipe){
-        loadPage("/html_files/project_divs/recipe.html");
+        loadPage("html_files/project_divs/recipe.html");
     }
 
 });
