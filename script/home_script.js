@@ -90,4 +90,13 @@ document.addEventListener("click",(e)=>{
 
 });
 
+document.addEventListener("click",(e)=>{
+    const volt = e.target.closest("#volt");
+
+    if(volt) {
+        window.location.href=" https://marquizallen.github.io/Volt-Pre-Workout-Landing-Page/";
+    }
+    
+});
+
 
