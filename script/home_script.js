@@ -99,4 +99,14 @@ document.addEventListener("click",(e)=>{
     
 });
 
+document.addEventListener("click",(e)=>{
+    const volt = e.target.closest("#rewind");
+
+    if(volt) {
+        window.location.href="https://marquizallen.github.io/rewind-cinema/";
+    }
+    
+});
+
+
 
